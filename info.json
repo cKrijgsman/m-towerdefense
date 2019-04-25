@@ -1,10 +1,12 @@
 {
-  "name": "towerdefense",
-  "version": "0.1.0",
-  "factorio_version": "0.16",
+  "name": "m-towerdefense",
+  "version": "0.2.0",
+  "factorio_version": "0.17",
   "title": "Tower Defense",
   "author": "blueblue",
   "contact": "deep.blueeee@yahoo.de",
-  "description": "Tower Defense Scenario, Beta Version.",
-  "dependencies": ["base >= 0.16.0"]
+  "homepage": "https://forums.factorio.com/viewtopic.php?f=36&t=59123",
+  "source": "https://github.com/ZwerOxotnik/m-towerdefense",
+  "description": "Tower Defense Scenario, Beta Version. Author: blueblue. This mod updated by ZwerOxotnik",
+  "dependencies": ["base", "stdlib"]
 }

@@ -1,7 +1,7 @@
 
 local ProtUtils = require("Utils.Prototype")
 local Table = require("Utils.Table")
-local S = "__towerdefense__"
+local S = "__m-towerdefense__"
 
 
 -- Rocket Turret related prototypes
@@ -141,7 +141,7 @@ Table.merge_into_first{recipe,
   },
 }
 
-local tech = Table.deepcopy(ProtUtils.technology("rocket-damage-2"))
+local tech = Table.deepcopy(ProtUtils.technology("stronger-explosives-2"))
 Table.merge_into_first{tech, {
   name = "rocket-turret",
   icon_size=128,
@@ -163,7 +163,7 @@ data:extend{entity, item, recipe, tech}
 
 local techs = {}
 for i = 1, 7 do 
-  tech = Table.deepcopy(ProtUtils.technology("flamethrower-damage-" .. i))
+  tech = Table.deepcopy(ProtUtils.technology("refined-flammables-" .. i))
   Table.merge_into_first{tech, 
   {
     name = "rocket-turret-damage-" .. i,

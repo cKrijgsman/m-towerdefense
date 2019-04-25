@@ -12,8 +12,8 @@
 local Table = require("Utils/Table")
 local VoteUI = require("Utils/VoteUI")
 
-local Event = require("stdlib/event/event")
-local StdString = require("stdlib/utils/string")
+local Event = require("__stdlib__/stdlib/event/event")
+local StdString = require("__stdlib__/stdlib/utils/string")
 
 local WaveCtrl = require("wave_control")
 local UpgradeSystem = require("upgrade_system")

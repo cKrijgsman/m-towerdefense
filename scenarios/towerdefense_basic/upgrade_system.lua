@@ -12,8 +12,8 @@ local UpgradeSystem = {}
 local mod_gui = require("mod-gui")
 local GuiUtils = require("Utils/Gui")
 local Table = require("Utils/Table")
-local Event = require("stdlib/event/event")
-local GuiEvent = require("stdlib/event/gui")
+local Event = require("__stdlib__/stdlib/event/event")
+local GuiEvent = require("__stdlib__/stdlib/event/gui")
 
 local cfg = require("cfg")
 
@@ -83,7 +83,7 @@ function UpgradeSystem.create_ui(player)
         UpgradeSystem.destroy_ui(player)
     end
     local frame = gui.add{type="frame", name = "upgradeframe", direction = "vertical"}
-    frame.style.visible = false
+    frame.visible = false
     local top_flow = frame.add{name="top_flow", type="flow", direction = "horizontal"}
 
     local label = top_flow.add{type="label", caption="Upgrades", tooltip = UpgradeSystem.artifact_tooltip}

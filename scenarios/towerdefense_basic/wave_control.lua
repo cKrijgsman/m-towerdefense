@@ -8,7 +8,7 @@ local Math = require("Utils/Maths")
 
 local Table = require("Utils/Table")
 local GuiUtils = require("Utils/Gui")
-local Event = require("stdlib/event/event")
+local Event = require("__stdlib__/stdlib/event/event")
 local mod_gui = require("mod-gui")
 local String = require("Utils/String")
 
@@ -25,9 +25,9 @@ global.wave_controls_all = global.wave_controls_all or {}
 
 -- Custom Events
 
-WaveCtrl.on_wave_starting = script.generate_event_name()
+WaveCtrl.on_wave_starting = Event.generate_event_name("on_wave_starting")
 -- {wave_index=, waves_ended=}
-WaveCtrl.on_wave_destroyed = script.generate_event_name()
+WaveCtrl.on_wave_destroyed = Event.generate_event_name("on_wave_destroyed")
 -- {wave_index=, game_ended=,  wave_control=}
 
 
@@ -84,7 +84,7 @@ local function update_wave_icons(wave_control, element)
             wave = wave_control.waves[wave_control.spawning_wave_index]
         end
         if wave then
-            element.style.visible = true
+            element.visible = true
             for entity_name, count in pairs(wave.unit_counts) do
                 if entity_name ~= "total" then
                     for i = 1, math.ceil(count / 30) do

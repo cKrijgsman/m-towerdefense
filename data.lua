@@ -1,4 +1,4 @@
-local S = "__towerdefense__"
+local S = "__m-towerdefense__"
 
 
 require("data/rocket-turret")
@@ -14,7 +14,7 @@ data:extend{
         name = "alien-artifact",
         icon = S .. "/graphics/icons/alien-artifact.png",
         icon_size = 32,
-        flags = {"goes-to-main-inventory"},
+        flags = {},
         subgroup = "raw-material", 
         order = "g[alien-artifact]",
         stack_size = 1000

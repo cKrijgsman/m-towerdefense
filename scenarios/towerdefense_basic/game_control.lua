@@ -10,7 +10,7 @@ local Table = require("Utils/Table")
 local Maths = require("Utils/Maths")
 local ScenarioUtils = require("Utils/Scenario")
 
-local Event = require("stdlib/event/event")
+local Event = require("__stdlib__/stdlib/event/event")
 
 local WaveCtrl = require("wave_control")
 local UpgradeSystem = require("upgrade_system")
@@ -21,7 +21,7 @@ local cfg = require("cfg")
 
 
 local GameControl = {}
-GameControl.on_game_ended = script.generate_event_name()
+GameControl.on_game_ended = Event.generate_event_name("on_game_ended")
 
 
 -- TODO: {x = 217.5, y = 72.5} causes bugs but it's still on the map.
@@ -56,7 +56,6 @@ GameControl.game_constants = {
         buffers = buffers_2
     },
     starting_inventory = {
-        ["steel-axe"] = 20,
         --["submachine-gun"] = 1,
         --["firearm-magazine"] = 20,
         ["artillery-targeting-remote"] = 1,
@@ -337,7 +336,7 @@ GameControl.game_constants = {
             title = "Faster Hands",
             description = "Increases handcrafting speed and mining speed by 150%",
             cost = 12,
-            icon = "item/iron-axe",
+            icon = "item/dummy-steel-axe",
             action = function(game_control, _)
                 game_control.player_force.manual_crafting_speed_modifier = game_control.player_force.manual_crafting_speed_modifier + 1.5
                 game_control.player_force.manual_mining_speed_modifier = game_control.player_force.manual_mining_speed_modifier + 1.5
@@ -619,7 +618,7 @@ function GameControl.player_enter_game(game_control, player)
     local wave_ui_frame = WaveCtrl.create_ui(player, game_control.wave_control, mod_flow)
     local caption = game_control.game_constants.hints[game_control.wave_control.spawning_wave_index] or game_control.game_constants.hints[1]
     local label = wave_ui_frame.add{type="label", name="hint_label", caption=caption}
-    label.style.visible = true
+    label.visible = true
     label.style.single_line = false
 
     -- Bonuses
