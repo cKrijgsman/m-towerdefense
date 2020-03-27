@@ -30,6 +30,7 @@ end
 -- Set up entity
 Table.merge_into_first{entity, {
   icon = S .. "/graphics/icons/rocket-turret.png",
+  icon_size=32,
   max_health = 600,
   collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
   selection_box = {{-1, -1 }, {1, 1}},
@@ -37,7 +38,7 @@ Table.merge_into_first{entity, {
   preparing_speed = 0.08,
   folding_speed = 0.08,
   dying_explosion = "medium-explosion",
-  attacking_speed = 0.5,  
+  attacking_speed = 0.5,
   folded_animation = 
   {
     layers =
@@ -121,6 +122,7 @@ entity.base_picture = nil
 Table.merge_into_first{item, 
   {
     icon = S .. "/graphics/icons/rocket-turret.png",
+    icon_size=32,
     order = "b[turret]-b-b",
     stack_size = 20,
   }
