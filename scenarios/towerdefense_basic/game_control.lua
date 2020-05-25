@@ -158,12 +158,12 @@ GameControl.game_constants = {
     },
 
     lock_recipes = {
-        "science-pack-1",
-        "science-pack-2",
-        "science-pack-3",
+        "automation-science-pack",
+        "logistic-science-pack",
+        "chemical-science-pack",
         "military-science-pack",
         "production-science-pack",
-        "hightech-science-pack"
+        "utility-science-pack"
     },
 
     unlock_recipes = {
@@ -211,30 +211,30 @@ GameControl.game_constants = {
         {
             name = "Bullet Upgrade",
             description = "Upgrades bullet damage and shooting speed.",
-            cost = 6,
+            cost = 7,
             cost_increase = 1,
             icon = "item/piercing-rounds-magazine",
             unlock = {
-                "bullet-damage",
-                "bullet-speed"
+                "physical-projectile-damage",
+                "weapon-shooting-speed"
             },
             level_max = 4,
         },
-        {
-            name = "Gun Turret Upgrade",
-            description = "Upgrades gun turret damage.",
-            cost = 4,
-            icon = "item/gun-turret",
-            unlock = "gun-turret-damage",
-            level_max = 4,
-        },
+        -- {
+        --     name = "Gun Turret Upgrade",
+        --     description = "Upgrades gun turret damage.",
+        --     cost = 4,
+        --     icon = "item/gun-turret",
+        --     unlock = "gun-turret-damage",
+        --     level_max = 4,
+        -- },
         {
             name = "Laser Turret Upgrade",
             description = "Upgrades laser turret damage and shooting speed.",
             cost = 5,
             icon = "item/laser-turret",
             unlock = {
-                "laser-turret-damage",
+                "energy-weapons-damage",
                 "laser-turret-speed",
             },
             level_max = 3,
