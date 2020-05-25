@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 2020-05-25
+  Bugfixes:
+    - Fixed upgrades
+  Changes:
+    - Bullet upgrade costs 7 instead of 6
+  Notes:
+    - Updated by ZwerOxotnik
+    - Original mod: https://mods.factorio.com/mod/towerdefense
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2019-04-25
   Features:
