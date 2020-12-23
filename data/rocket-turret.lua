@@ -155,7 +155,7 @@ Table.merge_into_first{tech, {
       recipe = "rocket-turret"
     }
   },
-  prerequisites = {"turrets", "rocketry"},
+  prerequisites = {"gun-turret", "rocketry"},
 }, 
 }
 
