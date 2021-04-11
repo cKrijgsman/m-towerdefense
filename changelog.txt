@@ -1,12 +1,12 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.3.0
-Date: 2020-12-23
+Version: 0.3.1
+Date: 2021-04-11
   Changes:
     - Updated for Factorio 1.1
   Notes:
     - Updated by ZwerOxotnik
+	- MrEvgen helped with migration of the map
     - Original mod: https://mods.factorio.com/mod/towerdefense
-    - Currently, scenario is broken
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 2020-05-25
