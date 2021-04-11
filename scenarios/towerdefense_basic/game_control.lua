@@ -10,7 +10,7 @@ local Table = require("Utils/Table")
 local Maths = require("Utils/Maths")
 local ScenarioUtils = require("Utils/Scenario")
 
-local Event = require("__stdlib__/stdlib/event/event")
+local Event = require("stdlib/event/event")
 
 local WaveCtrl = require("wave_control")
 local UpgradeSystem = require("upgrade_system")
@@ -21,7 +21,7 @@ local cfg = require("cfg")
 
 
 local GameControl = {}
-GameControl.on_game_ended = Event.generate_event_name("on_game_ended")
+GameControl.on_game_ended = script.generate_event_name()
 
 
 -- TODO: {x = 217.5, y = 72.5} causes bugs but it's still on the map.
@@ -647,7 +647,7 @@ function GameControl.reset_surface(game_control)
         end
 
         if not surface.find_entities_filtered{type="artillery-turret"}[1] and cfg.is_mod then
-            local art = surface.create_entity{name="artillery-turret-medium-range", force=game_control.player_force, position=game_control.game_constants.artillery_turret_position}
+            local art = surface.create_entity{name="artillery-turret", force=game_control.player_force, position=game_control.game_constants.artillery_turret_position}
             art.insert{name="artillery-shell", count = 2}
         end
 
@@ -906,7 +906,7 @@ end)
 
 
 -- Forbid player to build on lanes
-Event.register(defines.events.on_put_item, function(event)
+Event.register(defines.events.on_pre_build, function(event)
     local player = game.players[event.player_index]
     local game_control = global.game_control
     if not game_control or game_control.ended then return end

@@ -26,7 +26,7 @@ data:extend{
 
 -- Short range artillery turret
 -- Would like to be replaced by force.artillery_range_modifier
-local entity, item, recipe = ProtUtils.new_entity("artillery-turret-medium-range", "artillery-turret", "artillery-turret")
+local entity, item, recipe = ProtUtils.new_entity("artillery-turret", "artillery-turret", "artillery-turret")
 local gun = Table.copy(ProtUtils.gun("artillery-wagon-cannon"))
 
 entity.manual_range_modifier = 1

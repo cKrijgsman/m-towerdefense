@@ -12,8 +12,8 @@ local UpgradeSystem = {}
 local mod_gui = require("mod-gui")
 local GuiUtils = require("Utils/Gui")
 local Table = require("Utils/Table")
-local Event = require("__stdlib__/stdlib/event/event")
-local GuiEvent = require("__stdlib__/stdlib/event/gui")
+local Event = require("stdlib/event/event")
+local GuiEvent = require("stdlib/event/gui")
 
 local cfg = require("cfg")
 
@@ -116,7 +116,7 @@ end
 function UpgradeSystem.add_upgrade_to_ui(upgrade, player)
     local parent = mod_gui.get_frame_flow(player).upgradeframe.upgrade_scroll.upgrade_table
     local name = upgrade.name
-    local cost_label = parent.add{type="button", style="icon_button", caption=upgrade.cost, name="upgrade_cost_" .. name, tooltip="Purchase"}
+    local cost_label = parent.add{type="button", style="frame_button", caption=upgrade.cost, name="upgrade_cost_" .. name, tooltip="Purchase"}
     upgrade.cost_label = cost_label
     cost_label.style.height = 30
     cost_label.style.width = 30

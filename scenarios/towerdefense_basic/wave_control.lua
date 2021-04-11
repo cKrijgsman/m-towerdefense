@@ -8,7 +8,7 @@ local Math = require("Utils/Maths")
 
 local Table = require("Utils/Table")
 local GuiUtils = require("Utils/Gui")
-local Event = require("__stdlib__/stdlib/event/event")
+local Event = require("stdlib/event/event")
 local mod_gui = require("mod-gui")
 local String = require("Utils/String")
 
@@ -25,9 +25,9 @@ global.wave_controls_all = global.wave_controls_all or {}
 
 -- Custom Events
 
-WaveCtrl.on_wave_starting = Event.generate_event_name("on_wave_starting")
+WaveCtrl.on_wave_starting = script.generate_event_name()
 -- {wave_index=, waves_ended=}
-WaveCtrl.on_wave_destroyed = Event.generate_event_name("on_wave_destroyed")
+WaveCtrl.on_wave_destroyed = script.generate_event_name()
 -- {wave_index=, game_ended=,  wave_control=}
 
 
