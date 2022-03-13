@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: 2022-03-13
+  Changes:
+    - Updated for Factorio 1.1 (should work fine now)
+  Notes:
+    - Updated by ZwerOxotnik
+    - Original mod: https://mods.factorio.com/mod/towerdefense
+---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 2021-04-11
   Changes:
