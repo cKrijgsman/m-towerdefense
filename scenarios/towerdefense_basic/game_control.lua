@@ -140,6 +140,7 @@ GameControl.game_constants = {
         "batteries",
         "laser",
         "battery",
+        "fast-inserter",
         "stack-inserter",
         "laser-turret",
         "modules",

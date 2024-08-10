@@ -3,6 +3,7 @@ Version: 0.3.3
 Date: 2024-08-11
   Changes:
     - Fixed a crash that would occure when trying to build in the path.
+    - Added the "fast-inserter" technology so that stack inserters can actualy be crafted.
   Notes:
     - Updated by cKrijgsman
     - Original mod: https://mods.factorio.com/mod/towerdefense
